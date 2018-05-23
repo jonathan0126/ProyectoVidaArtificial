@@ -14,11 +14,11 @@ public class MostrarSimulacion extends JFrame{
     Thread hiloUno;
     Graphics buffer;
     BufferedImage dibujo;
-    Image ovejo = new ImageIcon(getClass().getResource("../img/ovejo.png")).getImage();
-    Image oveja = new ImageIcon(getClass().getResource("../img/oveja.png")).getImage();
-    Image lobo = new ImageIcon(getClass().getResource("../img/lobo.png")).getImage();
-    Image pasto = new ImageIcon(getClass().getResource("../img/pasto.png")).getImage();
-    Image fondo = new ImageIcon(getClass().getResource("../img/fondo.png")).getImage();
+    Image ovejo = new ImageIcon(getClass().getResource("/img/ovejo.png")).getImage();
+    Image oveja = new ImageIcon(getClass().getResource("/img/oveja.png")).getImage();
+    Image lobo = new ImageIcon(getClass().getResource("/img/lobo.png")).getImage();
+    Image pasto = new ImageIcon(getClass().getResource("/img/pasto.png")).getImage();
+    Image fondo = new ImageIcon(getClass().getResource("/img/fondo.png")).getImage();
     int cantOvejas;
     int cantLobos;
     public MostrarSimulacion(){
