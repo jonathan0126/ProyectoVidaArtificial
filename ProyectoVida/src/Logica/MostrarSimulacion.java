@@ -84,7 +84,7 @@ public class MostrarSimulacion extends JFrame{
     
     
     public void movimiento() {
-        hiloUno.start();
+        hiloUno.start(); // inicia toda la animacion en pantalla;
     }
     
     public void moverOveja() {
