@@ -5,8 +5,8 @@ package Logica;
  */
 public class Main {
 	public static void main(String[] args) {
-	FrameSimulacion simulacion= new FrameSimulacion();
-        simulacion.setVisible(true);
+            FrameSimulacion simulacion= new FrameSimulacion();
+            simulacion.setVisible(true);
 	}
 
 }

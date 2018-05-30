@@ -21,6 +21,7 @@ public class MostrarSimulacion extends JFrame{
     Image fondo = new ImageIcon(getClass().getResource("/img/fondo.png")).getImage();
     int cantOvejas;
     int cantLobos;
+    
     public MostrarSimulacion(){
         
         cantOvejas = Integer.parseInt(FrameSimulacion.textFieldCantidadO.getText());
@@ -37,20 +38,21 @@ public class MostrarSimulacion extends JFrame{
         setVisible(true);        
         setResizable(false);
         repaint();
-    /*hiloUno = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        moverOveja();
-                        moverLobo();
-                        repaint();
-                        Thread.sleep(45);
-                    } catch (InterruptedException e) {
+        
+        hiloUno = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (true) {
+                        try {
+                            moverOveja();
+                            moverLobo();
+                            repaint();
+                            Thread.sleep(45);
+                        } catch (InterruptedException e) {
+                        }
                     }
                 }
-            }
-        });*/
+            });
 }
  
     
@@ -81,7 +83,7 @@ public class MostrarSimulacion extends JFrame{
     }
     
     
-    /*public void movimiento() {
+    public void movimiento() {
         hiloUno.start();
     }
     
@@ -118,6 +120,6 @@ public class MostrarSimulacion extends JFrame{
                 losLobos.get(i).setY(losLobos.get(i).getY()+randomY);
             }
         }
-    }*/
+    }
     
 }

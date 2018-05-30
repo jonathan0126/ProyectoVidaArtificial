@@ -32,7 +32,7 @@ public class FrameSimulacion extends JFrame {
 	}
 		
 	
-		public void interfaz(){
+	public void interfaz(){
 		
 		JPanel panelDatos = new JPanel();
 		panelDatos.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -153,7 +153,7 @@ public class FrameSimulacion extends JFrame {
 	}
                 public void iniciar(){
                     MostrarSimulacion simu = new MostrarSimulacion();
-                    //simu.movimiento();
+                    simu.movimiento();
                     dispose();
                 }
 		
