@@ -11,7 +11,7 @@ import javax.swing.border.*;
 public class FrameSimulacion extends JFrame {
 	
 	JPanel contentPane;
-	JTextField textFieldPasto;
+	public static JTextField textFieldPasto;
 	public static JTextField textFieldCantidadO;
 	JTextField textFieldComidaO;
 	JTextField textFieldVidaO;

@@ -10,6 +10,10 @@ import java.util.*;
 public class Simulacion {
     int randomX;
     int randomY;
+    
+    int ancho = 1150;
+    int  alto = 720;
+    
     ArrayList<Oveja> Ovejas = new ArrayList<>();
     Oveja laOveja;
     ArrayList<Lobo> Lobos = new ArrayList<>();
@@ -17,12 +21,16 @@ public class Simulacion {
     ArrayList<Pasto> Pasto = new ArrayList<>();    
     Pasto elPasto;
 
+    public void setTamanoSimulacion(int anchoVentana, int altoVentana){
+        ancho = anchoVentana-50; //menos el ancho de los iconos de animales
+        alto = altoVentana-50; //menos al alto de los iconos de los animales
+    }
     
     
     public ArrayList<Oveja> Oveja(int cantOvejas){
         for(int i=0; i< cantOvejas;i++){     
-            randomX= (int) (Math.random()*(1150)) + 10;
-            randomY= (int) (Math.random()*(450)) + 10;
+            randomX= (int) (Math.random()*(ancho)) + 10;
+            randomY= (int) (Math.random()*(alto)) + 10;
             if(i%2 == 0){
                 laOveja = new Oveja(i, randomX, randomY);
             }
@@ -36,19 +44,19 @@ public class Simulacion {
 
     public ArrayList<Lobo> Lobo(int cantLobos) {     
         for(int i=0; i< cantLobos;i++){
-            randomX= (int) (Math.random()*(1150)) + 10;
-            randomY= (int) (Math.random()*(450)) + 10;
+            randomX= (int) (Math.random()*(ancho)) + 10;
+            randomY= (int) (Math.random()*(alto)) + 10;
             elLobo = new Lobo(i, randomX, randomY);
             Lobos.add(elLobo);
         }
         return Lobos;
     }
     
-    public ArrayList<Pasto> Pasto(){
-        int cantPasto = 1;        
+    public ArrayList<Pasto> Pasto(int cantPasto){
+        //int cantPasto = 1;        
         for(int i=0; i< cantPasto;i++){
-            randomX= (int) (Math.random()*(1150)) + 10;
-            randomY= (int) (Math.random()*(450)) + 10;
+            randomX= (int) (Math.random()*(ancho)) + 10;
+            randomY= (int) (Math.random()*(alto)) + 10;
             elPasto = new Pasto(i, randomX, randomY);
             Pasto.add(elPasto);            
         }  
