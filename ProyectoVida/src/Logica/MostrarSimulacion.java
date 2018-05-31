@@ -2,6 +2,7 @@ package Logica;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.net.URL;
 import java.util.*;
 import javax.swing.*;
 
@@ -138,7 +139,7 @@ public class MostrarSimulacion extends JFrame{
                             
                             
                             contador++;
-                            Thread.sleep(50); //se detien por 50 milisegundos, 
+                            Thread.sleep(10); //se detien por 50 milisegundos, 
                             
                              repaint();   
                         }catch (InterruptedException e) {
@@ -189,15 +190,35 @@ public class MostrarSimulacion extends JFrame{
         for (int i = 0; i < lasOvejas.size(); i++) {
             int randomX = (int) (Math.random() * 3);
             int randomY = (int) (Math.random() * 3);
-            if (randomX % 2 == 0) {
+            
+            
+            //Movimiento en X
+            if(lasOvejas.get(i).getX() >= 1163){
+                //if (randomX % 2 == 0) {
                 lasOvejas.get(i).setX(lasOvejas.get(i).getX()-randomX);
-            } else {
+            }
+            else if(lasOvejas.get(i).getX() <= 5){
                 lasOvejas.get(i).setX(lasOvejas.get(i).getX()+randomX);
             }
-            if (randomY % 2 == 0) {
+            else{
+                //Si es +, se mueve hacia la derecha
+                //si es -, se mueve hacia la izquierda
+                lasOvejas.get(i).setX(lasOvejas.get(i).getX()-randomX);
+            }
+                
+            
+            //Movimiento en Y
+            if(lasOvejas.get(i).getY() >= 672)
+            {
+                //if (randomX % 2 == 0) {
                 lasOvejas.get(i).setY(lasOvejas.get(i).getY()-randomY);
-            } else {
+            } else if(lasOvejas.get(i).getY() <= 27){
                 lasOvejas.get(i).setY(lasOvejas.get(i).getY()+randomY);
+            }
+            else{
+                //Si es -, se mueve hacia la arriba
+                //si es +, se mueve hacia la abajo
+                lasOvejas.get(i).setY(lasOvejas.get(i).getY()-randomY);
             }
         }
     }
@@ -206,14 +227,33 @@ public class MostrarSimulacion extends JFrame{
         for (int i = 0; i < losLobos.size(); i++) {
             int randomX = (int) (Math.random() * 3);
             int randomY = (int) (Math.random() * 3);
-            if (randomX % 2 == 0) {
+            //Movimiento en X
+            if(losLobos.get(i).getX() >= 1163){
+                //if (randomX % 2 == 0) {
                 losLobos.get(i).setX(losLobos.get(i).getX()-randomX);
-            } else {
+            }
+            else if(losLobos.get(i).getX() <= 5){
                 losLobos.get(i).setX(losLobos.get(i).getX()+randomX);
             }
-            if (randomY % 2 == 0) {
+            else{
+                //Si es +, se mueve hacia la derecha
+                //si es -, se mueve hacia la izquierda
+                losLobos.get(i).setX(losLobos.get(i).getX()-randomX);
+            }
+            
+            
+            
+            //Movimiento en Y
+            if(losLobos.get(i).getY() >= 664)
+            {
+                //if (randomX % 2 == 0) {
                 losLobos.get(i).setY(losLobos.get(i).getY()-randomY);
-            } else {
+            } else if(losLobos.get(i).getY() <= 27){
+                losLobos.get(i).setY(losLobos.get(i).getY()+randomY);
+            }
+            else{
+                //Si es -, se mueve hacia la arriba
+                //si es +, se mueve hacia la abajo
                 losLobos.get(i).setY(losLobos.get(i).getY()+randomY);
             }
         }
